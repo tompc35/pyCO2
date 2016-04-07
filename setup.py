@@ -27,7 +27,7 @@ def read(*filenames, **kwargs):
             buf.append(f.read())
     return sep.join(buf)
 
-long_description = read('README.txt', 'CHANGES.txt')
+long_description = read('README.rst', 'CHANGES.txt')
 
 
 class PyTest(TestCommand):
@@ -46,7 +46,7 @@ source = 'http://pypi.python.org/packages/source/c/co2sys'
 download_url = '%s/co2sys-%s.tar.gz' % (source, verstr)
 
 
-README = open('README.txt').read()
+README = open('README.rst').read()
 CHANGES = open('CHANGES.txt').read()
 LICENSE = open('LICENSE.txt').read()
 
