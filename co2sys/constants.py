@@ -98,12 +98,12 @@ def RT(temp, RGasConstant=83.1451):
     return RGasConstant * calc_tempK(temp)
 
 def calculate_TB(salt, ver="Uppstrom"):
-    """ Calculate Total Borate """
-    if "upp" in ver.lower():
-        return 0.0004157 * salt / 35 # in mol/kg-SW
-    else:
+	""" Calculate Total Borate """
+	if "upp" in ver.lower():
+		return 0.0004157 * salt / 35 # in mol/kg-SW
+	else:
 		# Lee, Kim, Byrne, Millero, Feely, Yong-Ming Liu. 2010.	
-	 	# Geochimica Et Cosmochimica Acta 74 (6): 1801?1811.
+		# Geochimica Et Cosmochimica Acta 74 (6): 1801?1811.
 		return 0.0004326 * salt / 35
 
 def calculate_KW(salt, temp, pres=None):
